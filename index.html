@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORN AI Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="https://i.postimg.cc/TYSfL6z2/Whats-App-Image-2024-09-02-at-13-27-50-removebg-preview.png" alt="Logo">
+                <h1>CORN AI</h1>
+            </div>
+            <div class="welcome-text">
+                <h2>Welcome back</h2>
+                <p>Please enter your details to sign in.</p>
+            </div>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Enter your email..." required>
+                <input type="password" id="password" placeholder="************" required>
+                <div class="options">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" id="signup-button">Login</button>
+            </form>
+            <div class="or">
+                <hr>
+                <span>or</span>
+                <hr>
+            </div>
+            <button class="google-login" type="button">
+                <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google">
+                Login with Google
+            </button>
+            <p>Don't have an account yet? <a href="signup.html" >Signup</a></p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please enter a valid email address.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Wait for the DOM to fully load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the signup button
+            const signupButton = document.getElementById('signup-button');
+
+            // Add a click event listener to the signup button
+            signupButton.addEventListener('click', () => {
+                // Redirect to the signup page
+                window.location.href = 'home.html'; // Replace 'signup.html' with your actual signup page URL
+            });
+        });
+
+        // Example for modal functionality
+        const modal = document.getElementById('emailModal');
+        const span = document.querySelector('.modal .close');
+
+        function showModal() {
+            modal.style.display = 'block';
+        }
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

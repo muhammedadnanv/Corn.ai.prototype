@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORN AI Signup</title>
+    <link rel="stylesheet" href="siginup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <div class="logo">
+                <img src="https://i.postimg.cc/TYSfL6z2/Whats-App-Image-2024-09-02-at-13-27-50-removebg-preview.png" alt="Logo">
+                <h1>CORN AI</h1>
+            </div>
+            <div class="welcome-text">
+                <h2>Create your account</h2>
+                <p>Please fill in the details to sign up.</p>
+            </div>
+            <form id="signupForm">
+                <input type="text" id="name" placeholder="Enter your name..." required>
+                <input type="email" id="email" placeholder="Enter your email..." required>
+                <input type="password" id="password" placeholder="Enter your password..." required>
+                <input type="password" id="confirmPassword" placeholder="Confirm your password..." required>
+                <div class="options">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms & Conditions</a></label>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="or">
+                <hr>
+                <span>or</span>
+                <hr>
+            </div>
+            <button class="google-login">
+                <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google">
+                Sign up with Google
+            </button>
+            <div class="login">
+                Already have an account? <a href="index.html">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please enter a valid email address.</p>
+        </div>
+    </div>
+
+    <script src="signup-script.js"></script>
+    
+</body>
+</html>

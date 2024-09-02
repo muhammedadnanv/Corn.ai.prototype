@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <h2>WhatsApp Clone</h2>
+        </div>
+        <div class="navbar-right">
+            <a href="dasboard.html" class="navbar-link">Dashboard</a>
+            <a href="settings.html" class="navbar-link">Settings</a>
+            <button class="navbar-btn">Logout</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Chats</h3>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <ul class="chat-list">
+                <!-- Repeat this chat item to simulate a list -->
+                <li class="chat-item">
+                    <div class="chat-avatar">
+                        <img src="avatar.png" alt="Avatar">
+                    </div>
+                    <div class="chat-info">
+                        <h4>Contact Name</h4>
+                        <p>Last message preview</p>
+                    </div>
+                    <div class="chat-time">12:45 PM</div>
+                </li>
+                <!-- Add more chat items here -->
+            </ul>
+        </div>
+        <div class="chat-window">
+            <div class="chat-header">
+                <h3>Contact Name</h3>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button id="sendMessageBtn">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
